@@ -1,0 +1,54 @@
+{
+    // ターミナルはgitにする
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    // 使用するpython
+    "python.pythonPath": "C:\\Users\\81908\\Anaconda3\\envs\\tfgpu\\python.exe",
+    // Linterにpylintを使用するかどうか
+    // ※linter：エディタ上で lint に引っかかるようなコードの書き方が良くない部分を指摘してくれるもの
+    "python.linting.pylintEnabled": false,
+    // Linterにflake8を使用するかどうか
+    // ※Flake8: コードがこの規約通りに書けているか、シンタックスエラーがないかなどをチェックしてくれるツール
+    "python.linting.flake8Enabled": true,
+    // flake8のオプション  Flake8の最大文字数を88文字に変えてる
+    "python.linting.flake8Args": [
+        "--max-line-length",
+        "88",
+        "--ignore=E203,W503,W504"
+    ],
+    "python.sortImports.args": [
+        "-m 3"
+    ],
+    // 言語ごとの拡張子やインデントの設定は{}でくくる
+    "[python]": {
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": true,
+        "editor.tabSize": 4
+    },
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+    "editor.fontSize": 11,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorCustomizations": {
+        "editor.selectionBackground": "#00ff0060",
+        "editor.selectionHighlightBackground": "#ffff0070"
+    },
+    "files.associations": {},
+    "tabnine.experimentalAutoImports": true,
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "basic",
+    "editor.formatOnType": true,
+    // isortでimport文を自動フォーマットさせない
+    "editor.codeActionsOnSave": null,
+    // Pythonフォーマッタの設定
+    // ※black: エラー修正や1行の文字制限改行などを自動でやってくれるツール
+    "python.formatting.provider": "black",
+    // ファイル保存時にpython.formatting.providerに従って自動整形するかどうか
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "editor.accessibilityPageSize": 12
+}
